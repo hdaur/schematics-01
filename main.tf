@@ -16,6 +16,7 @@ resource "null_resource" "sleep" {
 
   provisioner "local-exec" {
     #command = "sleep 30"
-    command = "ping 127.0.0.1 -n 3 >NUL"  # windows version using timeout 
+    #command = "ping 127.0.0.1 -n 3 >NUL"  # windows version using timeout 
+    command = "echo 'hallo'"
   }
 }
