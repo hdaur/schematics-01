@@ -1,10 +1,11 @@
 # Create an arbitrary local resource
 
 data "template_file" "test" {
-    template = "Template with vars: [1] $${samplevar1}"
+    template = "Template with vars: [1] $${samplevar1} [2] $${samplevar2}"
 
     vars {
         samplevar1 = "${var.myparm1}"
+        samplevar2 = "${var.myparm_sensitive}"
     }
 }
 
